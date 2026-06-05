@@ -11,10 +11,10 @@ def inicio():
     try:
 
         conexion = psycopg2.connect(
-            host="db",
+            host="PostgreSQL 18",
             database="empresa",
-            user="admin",
-            password="admin123"
+            user="postgres",
+            password="12345"
         )
 
         cursor = conexion.cursor()

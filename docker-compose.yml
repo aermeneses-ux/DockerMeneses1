@@ -37,7 +37,7 @@ services:
 
   app:
 
-    image: ghcr.io/usuario/devops-flask-postgres:2.0.0
+    image: ghcr.io/aermeneses-ux/dockermeneses1:2.0.0
 
     container_name: flaskapp
 
