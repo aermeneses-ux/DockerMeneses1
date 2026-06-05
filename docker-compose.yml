@@ -19,6 +19,9 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
+    networks:
+      - backend
+
   pgadmin:
 
     image: dpage/pgadmin4
@@ -35,6 +38,9 @@ services:
     depends_on:
       - db
 
+    networks:
+    - backend
+
   app:
 
     image: ghcr.io/aermeneses-ux/dockermeneses1:2.0.0
@@ -47,5 +53,12 @@ services:
     depends_on:
       - db
 
+    networks:
+    - backend
+
 volumes:
   postgres_data:
+
+networks:
+  backend:
+    driver: bridge
